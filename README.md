@@ -7,7 +7,19 @@ It's meant to be seen by readers who want to learn about the extension, what it 
 
 ### Installation
 
-Nothing to install or build. It's a webpage, ready to host.
+You'll want to install the `sass` package to get SCSS compilation to CSS going, plus a simple web server:
+
+```sh
+npm install -g sass http-server
+```
+
+Then, to run both processes simultaneously, you can just run:
+
+```sh
+{ http-server; } & { sass --watch assets/css/main.scss assets/css/main.css; }
+```
+
+Once that's done, you're good to go. You can see the webpage by visitin [localhost:8081] (or whatever port `http-server` tells you it's using).
 
 ### Deployment
 
