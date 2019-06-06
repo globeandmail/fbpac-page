@@ -19,7 +19,7 @@ Then, to run both processes simultaneously, you can just run:
 { http-server; } & { sass --watch assets/css/main.scss assets/css/main.css; }
 ```
 
-Once that's done, you're good to go. You can see the webpage by visitin [localhost:8081] (or whatever port `http-server` tells you it's using).
+Once that's done, you're good to go. You can see the webpage by visiting [localhost:8081](localhost:8081) (or whatever port `http-server` tells you it's using).
 
 ### Deployment
 
