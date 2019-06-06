@@ -1,13 +1,14 @@
-This expects to live at `propublica/political-ad-collector`.
+# fbpac-page
 
-The `politicaladcollector.com` domain goes to a CloudFront'd S3 that simply redirects to `https://projects.propublica.org/political-ad-collector/`. (Cloudfront to terminate SSL for free, S3 to statically redirect this single page site.)
+This is an explanatory webpage for the [Facebook Political Ad Collector](https://github.com/globeandmail/facebook-political-ads/). For a full breakdown of the other services you'll need to deploy the app, see the [README for our main repo](https://github.com/globeandmail/facebook-political-ads/blob/master/README.md).
 
-Then, we've got `projects.propublica.org/political-ad-collector/` set up to serve as a dumb proxy to `https://propublica.github.io/political-ad-collector/` (so plz don't rename this repo).
+It's meant to be seen by readers who want to learn about the extension, what it does (and doesn't) collect, etc.
 
-All of this to 1) provide SSL on the custom domain and 2) put it under a propublica URL for reader trust and whatnot.
 
-You can still edit the assets and `index.html` to your hearts content! That `projects.propublica.org/political-ad-collector/` url should work as if it were normal Github Pages.
+### Installation
 
-This is deployed automatically, on deploy to the `master` branch.
+Nothing to install or build. It's a webpage, ready to host.
 
-Jeremy (7/16/2018) doesn't know how to update the SCSS...
+### Deployment
+
+Find a host and put it on there. Alternatively, deploy this to GitHub Pages.
