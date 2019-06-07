@@ -22,9 +22,13 @@
 
   var isMobile = mobileTest(navigator.userAgent || navigator.vendor || window.opera);
 
-  switcher();
+  var startsWithHash = /^#.+/;
+
+  document.body.classList.add('generic');
 
   if (isMobile) document.querySelector('.cta').classList.add('hide');
+
+  switcher();
 
   Array.from(document.querySelectorAll('.switch')).map(function(el) {
     el.addEventListener('click', function(event) {
@@ -36,8 +40,6 @@
       }
     });
   });
-
-  var startsWithHash = /^#.+/;
 
   Array.from(document.querySelectorAll('a')).map(function(el) {
     if (startsWithHash.test(el.href)) {
