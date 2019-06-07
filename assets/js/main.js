@@ -37,13 +37,17 @@
     });
   });
 
+  var startsWithHash = /^#.+/;
+
   Array.from(document.querySelectorAll('a')).map(function(el) {
-    el.addEventListener('click', function(event) {
-      event.preventDefault();
-      if (document.body.scrollIntoView) {
-        document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+    if (startsWithHash.test(el.href)) {
+      el.addEventListener('click', function(event) {
+        if (this.hash && document.body.scrollIntoView) {
+          event.preventDefault();
+          document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
   });
 
 })();
